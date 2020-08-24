@@ -27,7 +27,7 @@ resource "google_storage_bucket" "restore_state_bucket" {
 resource "google_storage_bucket_object" "upload-state-file" {     //used
   name   = "terraform_state_restore/"
   content = "Not really a directory, but it's empty"
-  bucket = trimprefix("${var.root-small-deploy-source-code-bucket}","gs://")
+  bucket = trimprefix(var.root-small-deploy-source-code-bucket,"gs://")
   //bucket = "gs://integrate-source-code-small-for-testing"
   content_type = "text/x-sh"
   provisioner "local-exec" {
