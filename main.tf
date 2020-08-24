@@ -12,7 +12,7 @@ module "small_deploy" {
   source = "./modules/small_deploy"
 
   root-terraform-project-home-folder = "${var.azure-pipeline-input-terraform-project-home-folder}"
-  root-small-deploy-state-bucket = "${module.small_deploy.state-bucket}"
+  root-small-deploy-source-code-bucket = "${module.small_deploy.source-code-bucket}"
 
 }
 

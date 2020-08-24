@@ -2,6 +2,6 @@ variable "root-terraform-project-home-folder" {
 
 }
 
-variable "root-small-deploy-state-bucket" {
+variable "root-small-deploy-source-code-bucket" {
 
 }
