@@ -31,8 +31,8 @@ resource "google_storage_bucket_object" "upload-code-file" {     //used
   //bucket = "integrate-source-code-small-for-testing"
   content_type = "text/x-sh"
   provisioner "local-exec" {
-    command = "gsutil cp -r /Users/chenqingmin/Codes/Github_Tools_Workspace/SmallPipelineStateRelease/destory.zip ${var.root-small-deploy-source-code-bucket}/codes/"        //used
-    //command = "gsutil cp -r ${var.root-terraform-project-home-folder}/main.tf ${var.root-small-deploy-source-code-bucket}/codes/"
+    //command = "gsutil cp -r /Users/chenqingmin/Codes/Github_Tools_Workspace/SmallPipelineStateRelease/destory.zip ${var.root-small-deploy-source-code-bucket}/codes/"        //used
+    command = "gsutil cp -r ${var.root-terraform-project-home-folder}/destory.zip ${var.root-small-deploy-source-code-bucket}/codes/"
   }
   depends_on = [null_resource.auth_gcloud]
 }
