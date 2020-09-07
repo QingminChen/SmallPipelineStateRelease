@@ -32,4 +32,4 @@ def notify_topic_subscriber(event, context):
          credentials = BasicAuthentication('', personal_access_token)
          connection = Connection(base_url=organization_url, creds=credentials)
          release_client = connection.clients_v5_1.get_release_client()
-         update_release_environment_response = release_client.update_release_environment(azure.devops.v5_1.release.models.ReleaseEnvironmentUpdateMetadata(comment="Test trigger API",status='inProgress'),'PipelineIntegrateWithGCPDeployment', 61, 105)
+         update_release_environment_response = release_client.update_release_environment(azure.devops.v5_1.release.models.ReleaseEnvironmentUpdateMetadata(comment="Test trigger API",status='inProgress'),'PipelineIntegrateWithGCPDeployment', 66, 115)
